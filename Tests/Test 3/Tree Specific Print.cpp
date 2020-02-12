@@ -28,6 +28,8 @@ public:
     }
 
 private:
+    Node* root;	
+	
     void printRec(Node* root, int dividedBy){
         if(root == nullptr)
             return;
@@ -37,9 +39,7 @@ private:
             cout << root->value << " ";
         printRec(root->left, dividedBy);
         printRec(root->right, dividedBy);
-    }
-
-    Node* root;
+    }    
 
     Node* insert(Node *curNode, int value){
         if(curNode == NULL){
@@ -54,6 +54,7 @@ private:
         return curNode;
     }
 };
+
 int main() {
     int n;
     cin >> n;
