@@ -28,7 +28,7 @@ public:
     }
 
 private:
-	void printRec(Node* root, int dividedBy)
+    void printRec(Node* root, int dividedBy)
     {
         if(root == nullptr)
             return;
