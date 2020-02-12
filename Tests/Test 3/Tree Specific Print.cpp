@@ -28,8 +28,7 @@ public:
     }
 
 private:
-    void printRec(Node* root, int dividedBy)
-    {
+    void printRec(Node* root, int dividedBy){
         if(root == nullptr)
             return;
         
@@ -57,15 +56,15 @@ private:
 };
 int main() {
     int n;
-  	cin >> n;
-  	int value;
-  	BST tree;
-  	for(int i = 0 ; i < n; i++){
+    cin >> n;
+    int value;
+    BST tree;
+    for(int i = 0 ; i < n; i++){
       cin >> value;
       tree.insert(value);
     }
-  	int dividedBy;
-  	cin >> dividedBy;
-  	tree.printSpecific(dividedBy);
+    int dividedBy;
+    cin >> dividedBy;
+    tree.printSpecific(dividedBy);
     return 0;
 }
