@@ -65,8 +65,10 @@ int main()
 		dag.addEdge(p, t);
 	}
 
-	cout << '\n';
-	cout << "is cyclic: " << dag.isCyclic() << '\n';
+	if (dag.isCyclic())
+		cout << "The graph is cyclic, it is NOT DAG!";
+	else
+		cout << "The graph is NOT cyclic, it is DAG!";
 
 	return 0;
 }
