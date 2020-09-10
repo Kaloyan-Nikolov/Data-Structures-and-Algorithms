@@ -73,7 +73,6 @@ int main()
 	return 0;
 }
 
-
 /*
 8 8
 1 2
