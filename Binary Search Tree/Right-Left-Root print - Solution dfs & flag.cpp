@@ -59,33 +59,6 @@ public:
 	{
 		realPrint(root, 1);
 	}
-
-	// SECOND SOLUTION
-
-	/*queue<int> myQ;
-	void realPrint(Node* root)
-	{
-		if (root == nullptr)
-		{
-			return;
-		}
-
-		realPrint(root->rightNode);
-		realPrint(root->leftNode);
-		myQ.push(root->data);
-	}
-
-	void print(Node *root)
-	{
-		realPrint(root);
-		while (myQ.size() > 1)
-		{
-			cout << myQ.front() << ";";
-			myQ.pop();
-		}
-
-		cout << myQ.front();
-	}*/
 };
 
 int main()
