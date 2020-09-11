@@ -4,7 +4,8 @@ using namespace std;
 
 unsigned long long inversions = 0;
 
-void merge(vector<int>& v, vector<int>& L, vector<int>& R) {
+void merge(vector<int>& v, vector<int>& L, vector<int>& R)
+{
 	int sizeLeft = (int)L.size();
 	int sizeRight = (int)R.size();
 
@@ -12,7 +13,8 @@ void merge(vector<int>& v, vector<int>& L, vector<int>& R) {
 	int j = 0; // index of R
 	int k = 0; // index of v
 
-	while (i < sizeLeft && j < sizeRight) {
+	while (i < sizeLeft && j < sizeRight)
+	{
 		if (L[i] < R[j])
 		{
 			v[k++] = L[i++];
@@ -27,7 +29,8 @@ void merge(vector<int>& v, vector<int>& L, vector<int>& R) {
 	while (j < sizeRight) v[k++] = R[j++];
 }
 
-void mergeSort(vector<int>& v) {
+void mergeSort(vector<int>& v)
+{
 	int s = (int)v.size();
 
 	if (s < 2)
@@ -46,8 +49,8 @@ void mergeSort(vector<int>& v) {
 	merge(v, L, R);  // merging L and R into one vector - v;
 }
 
-int main() {
-
+int main()
+{
 	vector<int> test = { 5, 0, 4, -2, 17, 8, 3, 4, -6, 5, 9 };
 	mergeSort(test);
 	for (auto i : test) cout << i << " ";
