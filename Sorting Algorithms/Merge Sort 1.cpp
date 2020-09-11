@@ -17,6 +17,7 @@ void merge(vector<int>& v, int l, int m, int r)
 	int i = 0; int j = 0; int k = l;
 
 	while (i < s1 && j < s2)
+	{
 		if (L[i] < R[j])
 		{
 			v[k++] = L[i++];
@@ -26,6 +27,7 @@ void merge(vector<int>& v, int l, int m, int r)
 			v[k++] = R[j++];
 			inversions += s1 - i;
 		}
+	}
 
 	while (i < s1) v[k++] = L[i++];
 	while (j < s2) v[k++] = R[j++];
